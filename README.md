@@ -5,7 +5,7 @@ Final Project Proposal
 
 ####Summary####
 
-The website will serve as a schedule for the games in the **FIFA World Cup** in Brazil. Using an interactive map of Brazil, users will be able to select a host city, and see a countdown to games played in that city (in local time).
+The website will serve as a schedule for the first games in each host city of the **FIFA World Cup** in Brazil. Using an interactive map of Brazil, users will be able to select a host city, and see a countdown to the next game played in that city.
 
 >"Life and Death. And between the two, soccer." *- Sid Lowe*
 

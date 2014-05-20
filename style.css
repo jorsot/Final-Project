@@ -1,0 +1,215 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,700);
+
+body {
+	background-color: #CED8FF;
+	/*background-image: "background.png";*/
+	animation:bgfade 3s;
+	-webkit-animation:bgfade 4s;
+	background-repeat: repeat-y;
+}
+
+#sched-container {
+	padding-left: 2em;
+	position: absolute;
+	width: 50%;
+	background-color: blue;
+	left: 60%
+}
+
+#whitebox {
+	top: 2em;
+	height: 9em;
+	background-color: white;
+	z-index: 1;
+	border-radius: 10px;
+	transition: box-shadow .2s, left .3s;
+	-webkit-transition: box-shadow .2s, left .3s;
+	width: 48%;
+	position: absolute;
+	left: 0%;
+	margin: 5%;
+}
+
+#whitebox:hover {
+	box-shadow: 0px 0px 20px 5px #dfd;
+}
+
+#city-name-div, #fixture-div, #game-time-div {
+	pointer-events: none;
+	width: 45%;
+	position: absolute;
+	left: 0%;
+	margin: 5%;
+	padding: .7em;
+	transition: left .2s;
+	-webkit-transition: left .45s;
+	display: inline-block;
+	z-index: 4;
+}
+
+#city-name-div {
+	top: 0em;
+}
+
+#fixture-div {
+	top: 3.7em;
+}
+
+#game-time-div {
+	top: 6em;
+
+}
+
+#city-name {
+	font-family: Lato;
+	font-weight: 700;
+	font-size: 1.9em;
+	color: red;
+	animation: fade 2s .2s;
+	-webkit-animation: fade 3.8s;
+}
+
+#fixture {
+	font-family: Lato;
+	font-weight: 700;
+	font-size: 1.2em;
+	color: black;
+	animation: fade 2s .8s;
+	-webkit-animation: fade 3.2s .6s;
+}
+
+#game-time {
+	font-family: Lato;
+	font-size: 1em;
+	color: gray;
+	animation: fade 2s 1.5s;
+	-webkit-animation: fade 2s 1.2s;
+}
+
+#map-container {
+/*	margin-left: 3em;
+*/	width: 40%;
+	position: fixed;
+	left: 5%;
+	-webkit-transition: opacity 1.5s;
+
+}
+
+#svg-map {
+	pointer-events: none;
+	width: 50%;
+	height: 100%;
+	-webkit-animation: slidefade .5s;
+
+}
+
+#svg-cities {
+	left: -50%;
+	width: 50%;
+	height: 100%;
+	transition: left .8s;
+	-webkit-transition: left .5s;
+}
+
+.layer1 {
+	z-index: 1;
+	position: fixed;
+}
+
+.layer2 {
+	z-index: 2;
+	position: fixed;
+}
+
+
+/*MAP SVG STYLES*/
+.reg0{fill:#D5AE34;}
+.reg1{fill:#40942D;}
+.reg2{fill:#BFAF32;}
+.reg3{fill:#0C71B3;}
+.reg4{fill:#80A22F;}
+.reg5{fill:#00862A;}
+
+/*CITY SVG STYLES*/
+.svg-icon{
+	fill:#D6D6D6;
+}
+
+.svg-icon-stroke{
+	fill:#FF4E00;
+}
+
+.svg-city-name{
+	fill:#FFFFFF;
+	font-family: 'Lato';
+	font-weight: 700;
+	font-size: 1em;
+	transition: font-size .2s;
+	-webkit-transition: font-size .2s;
+}
+
+	.svg-city-name:hover{
+		font-size: 1.8em;
+		text-shadow: 2px 2px 10px #333;
+
+	}
+
+
+
+.svg-city-name-alt{
+	fill:#000;
+	font-family: 'Lato';
+	font-weight: 700;
+	font-size: 1em;
+	transition: font-size .2s;
+	-webkit-transition: font-size .2s;
+}
+
+	.svg-city-name-alt:hover{
+			font-size: 1.8em;
+			text-shadow: 2px 2px 10px #333;
+	}
+
+path {
+	transition: fill .35s;
+	-webkit-transition: fill .35s;
+
+}
+path:hover{
+	fill:blue;
+}
+/*ANIMATIONS*/
+
+@keyframes bgfade {
+	from {background-color: #fff;}
+	to {background-color: #CED8FF;}
+
+}
+
+@-webkit-keyframes bgfade {
+	from {background-color: #fff;}
+	to {background-color: #CED8FF;}
+
+}
+
+
+@keyframes slidefade {
+	0% {width:0%;opacity: 0;}
+	50% {opacity: .2;}
+	100% {width:50%;opacity: 1;}
+}
+
+@-webkit-keyframes slidefade {
+	0% {left:-50%;}
+	100% {left:5%;}
+}	
+
+@keyframes fade {
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+@-webkit-keyframes fade {
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
