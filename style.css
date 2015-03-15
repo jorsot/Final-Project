@@ -65,7 +65,7 @@ body {
 	font-weight: 700;
 	font-size: 1.9em;
 	color: red;
-	animation: fade 2s .2s;
+	animation: fade 3.8s;
 	-webkit-animation: fade 3.8s;
 }
 
@@ -74,7 +74,7 @@ body {
 	font-weight: 700;
 	font-size: 1.2em;
 	color: black;
-	animation: fade 2s .8s;
+	animation: fade 3.2s .6s;
 	-webkit-animation: fade 3.2s .6s;
 }
 
@@ -82,7 +82,7 @@ body {
 	font-family: Lato;
 	font-size: 1em;
 	color: gray;
-	animation: fade 2s 1.5s;
+	animation: fade 2s 1.2s;
 	-webkit-animation: fade 2s 1.2s;
 }
 
@@ -91,14 +91,15 @@ body {
 */	width: 40%;
 	position: fixed;
 	left: 5%;
+	transition: opacity 1.5s;
 	-webkit-transition: opacity 1.5s;
-
 }
 
 #svg-map {
 	pointer-events: none;
 	width: 50%;
 	height: 100%;
+	animation: slidefade .5s;
 	-webkit-animation: slidefade .5s;
 
 }
@@ -108,7 +109,7 @@ body {
 	width: 50%;
 	height: 100%;
 	transition: left .8s;
-	-webkit-transition: left .5s;
+	-webkit-transition: left .8s;
 }
 
 .layer1 {
